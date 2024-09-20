@@ -17,7 +17,7 @@ class Estoque {
         }
 
         fun listarProdutos(): List<Produto> {
-            return listaProdutos.toList() // Retorna uma cópia da lista para evitar modificações externas
+            return listaProdutos.toList()
         }
     }
 }

@@ -129,8 +129,8 @@ fun TelaListaProdutos(navController: NavHostController) {
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(10.dp),
-                    horizontalArrangement = Arrangement.SpaceAround, // Alinha os elementos nas extremidades
-                    verticalAlignment = Alignment.CenterVertically // Centraliza verticalmente
+                    horizontalArrangement = Arrangement.SpaceAround,
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(text = "${produto.nome} (${produto.quantidade} unidades)")
                     Button(onClick = {
@@ -144,7 +144,6 @@ fun TelaListaProdutos(navController: NavHostController) {
         }
         Spacer(modifier = Modifier.height(20.dp))
 
-        // Botão para ver as estatísticas
         Button(onClick = {
             navController.navigate("estatisticas")
         }) {
@@ -153,7 +152,7 @@ fun TelaListaProdutos(navController: NavHostController) {
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(onClick = {
-            navController.navigate("cadastroProduto") // Navega para a tela de cadastro de produtos
+            navController.navigate("cadastroProduto")
         }) {
             Text(text = "Cadastrar Novo Produto")
         }
@@ -182,7 +181,7 @@ fun TelaEstatisticas(navController: NavHostController) {
         Spacer(modifier = Modifier.height(15.dp))
 
         Button(onClick = {
-            navController.navigate("listaProdutos") // Navega para a tela de lista de produtos
+            navController.navigate("listaProdutos")
         }) {
             Text(text = "Voltar para Lista de Produtos")
         }
